@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 应用名 -->
+    <dubbo:application name="dubbo-demo-provider"/>
+    <!-- 连接到哪个本地注册中心 -->
+    <dubbo:registry id="dubbo-provider" address="zookeeper://localhost:2181"/>
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="28080"/>
+    <!-- 声明需要暴露的服务接口 -->
+    <bean id="userServiceImpl" class="com.coo.service.impl.UserServiceImpl"></bean>
+    <dubbo:service  timeout="3000" interface="com.coo.rec.api.IUserService" ref="userServiceImpl"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <bean id="accountServiceImpl" class="com.coo.service.impl.AccountServiceImpl"></bean>
+    <dubbo:service  timeout="3000" interface="com.coo.rec.api.IAccountService" ref="accountServiceImpl"/>
+</beans>

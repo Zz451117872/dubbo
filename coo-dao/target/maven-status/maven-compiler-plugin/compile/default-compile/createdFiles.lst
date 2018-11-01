@@ -1,0 +1,5 @@
+com\coo\dao\model\Account.class
+com\coo\dao\model\User.class
+com\coo\dao\Generater.class
+com\coo\dao\mapper\AccountMapper.class
+com\coo\dao\mapper\UserMapper.class

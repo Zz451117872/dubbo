@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/coo-common/coo-common.iml" filepath="$PROJECT_DIR$/coo-common/coo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coo-dao/coo-dao.iml" filepath="$PROJECT_DIR$/coo-dao/coo-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coo-rpc-api/coo-rpc-api.iml" filepath="$PROJECT_DIR$/coo-rpc-api/coo-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coo-service-impl/coo-service-impl.iml" filepath="$PROJECT_DIR$/coo-service-impl/coo-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/coo-web/coo-web.iml" filepath="$PROJECT_DIR$/coo-web/coo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbo-demo.iml" filepath="$PROJECT_DIR$/dubbo-demo.iml" />
+    </modules>
+  </component>
+</project>
